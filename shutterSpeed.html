@@ -1,0 +1,52 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="shutterSpeed.js"></script>
+</head>
+<body>
+<div class="container" style="font-family: 'Merriweather Sans', sans-serif;">
+  <h2>Handheld Shutter Speed Calculator</h2>
+  <br/>
+  <form id="handHeldForm" onload="CalculateShutterSpeed()">
+    <fieldset>
+      <div class="form-group">
+        <label class="control-label">Lens Focal Length</label>
+        <div class="inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
+            <input id="fLength" placeholder="Lens focal length" class="form-control" type="number" min="1" value="50" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+            <span class="input-group-addon">mm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Crop Factor</label>
+        <div class="inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-crop"></i></span>
+            <input id="cropFactor" placeholder="Crop Factor" class="form-control" type="number" step=".1" min="1" value="1.6" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Stabilization</label>
+        <div class="inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-hand-paper-o"></i></span>
+            <input id="fStops" placeholder="Stabilization Stops" class="form-control" type="number" min="0" value="0" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+            <span class="input-group-addon">stops</span>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <td class="col-xs-6" align="center">
+    <div>
+      <h3 id="shutterSpeed">Error Occurred / Enable JavaScript</h3>
+    </div>
+</div>
+</body>
+</html>
