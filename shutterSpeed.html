@@ -7,12 +7,13 @@
 <script src="shutterSpeed.js"></script>
 </head>
 <body>
-<div class="container" style="font-family: 'Merriweather Sans', sans-serif;">
+<div class="container-fluid" style="font-family: 'Merriweather Sans', sans-serif; max-width: 600px;">
   <h2>Handheld Shutter Speed Calculator</h2>
   <br/>
-  <form id="handHeldForm" onload="CalculateShutterSpeed()">
+  <form id="handHeldForm" class="form-horizontal" onload="CalculateShutterSpeed()">
     <fieldset>
-      <div class="form-group">
+    
+      <div class="form-group col-sm-12">
         <label class="control-label">Lens Focal Length</label>
         <div class="inputGroupContainer">
           <div class="input-group">
@@ -24,15 +25,28 @@
       </div>
 
       <div class="form-group">
-        <label class="control-label">Crop Factor</label>
-        <div class="inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-crop"></i></span>
-            <input id="cropFactor" placeholder="Crop Factor" class="form-control" type="number" step=".1" min="1" value="1.6" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+        <div class="col-sm-7">
+          <label class="control-label">Crop Factor</label>
+          <div class="inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-crop"></i></span>
+              <input id="cropFactor" placeholder="Crop Factor" class="form-control" type="number" step=".1" min="1" value="1.6" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <label class="control-label">Effective Focal Length</label>
+          <div class="inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
+              <input id="efLength" placeholder="Effective focal length" class="form-control" type="number" value="50" disabled>
+              <span class="input-group-addon">mm</span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="form-group">
+
+      <div class="form-group col-sm-12">
         <label class="control-label">Stabilization</label>
         <div class="inputGroupContainer">
           <div class="input-group">
@@ -42,12 +56,12 @@
           </div>
         </div>
       </div>
+      
     </fieldset>
   </form>
-  <td class="col-xs-6" align="center">
-    <div>
-      <h3 id="shutterSpeed">Error Occurred / Enable JavaScript</h3>
-    </div>
+  <div>
+    <h3 id="shutterSpeed">Error Occurred / Enable JavaScript</h3>
+  </div>
 </div>
 </body>
 </html>
