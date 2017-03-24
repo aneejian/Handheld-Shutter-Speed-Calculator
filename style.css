@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+.form-group > label, .form-group > div {
+    display:inline-block;
+    vertical-align: middle;
+}
+.control-label {
+  font-weight: 100 !important;
+  margin-bottom: 5px !important;
+}
