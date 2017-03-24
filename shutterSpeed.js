@@ -4,6 +4,7 @@ function CalculateShutterSpeed() {
   var cropFactor = hForm.elements['cropFactor'].value;
   var fStops = hForm.elements['fStops'].value;
   var effectivefLength = fLength * cropFactor;
+  hForm.elements['efLength'].value = Math.round(effectivefLength);
   var stabilization = Math.pow(2, fStops);
   var denominator = (effectivefLength / stabilization);
   var insecs = stabilization / effectivefLength;
