@@ -8,60 +8,64 @@
 </head>
 <body>
 <div class="container-fluid" style="font-family: 'Merriweather Sans', sans-serif; max-width: 600px;">
-  <h2>Handheld Shutter Speed Calculator</h2>
-  <br/>
-  <form id="handHeldForm" class="form-horizontal" onload="CalculateShutterSpeed()">
-    <fieldset>
-    
-      <div class="form-group col-sm-12">
-        <label class="control-label">Lens Focal Length</label>
-        <div class="inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-            <input id="fLength" placeholder="Lens focal length" class="form-control" type="number" min="1" value="50" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+<h2>
+Handheld Shutter Speed Calculator</h2>
+<br />
+<form class="form-horizontal" id="handHeldForm" onload="CalculateShutterSpeed()">
+<fieldset>
+<div class="form-group col-sm-12">
+<label class="control-label">Lens Focal Length</label>
+        <br />
+<div class="inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
+            <input class="form-control" id="fLength" min="1" onchange="CalculateShutterSpeed()" onkeypress="CalculateShutterSpeed()" onkeyup="CalculateShutterSpeed()" placeholder="Lens focal length" type="number" value="50" />
             <span class="input-group-addon">mm</span>
           </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-sm-7">
-          <label class="control-label">Crop Factor</label>
-          <div class="inputGroupContainer">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-crop"></i></span>
-              <input id="cropFactor" placeholder="Crop Factor" class="form-control" type="number" step=".1" min="1" value="1.6" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+</div>
+</div>
+<div class="form-group">
+<div class="col-sm-6">
+<label class="control-label">Crop Factor</label>
+          <br />
+<div class="inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-crop"></i></span>
+              <input class="form-control" id="cropFactor" min="1" onchange="CalculateShutterSpeed()" onkeypress="CalculateShutterSpeed()" onkeyup="CalculateShutterSpeed()" placeholder="Crop Factor" step=".1" type="number" value="1.6" />
             </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <label class="control-label">Effective Focal Length</label>
-          <div class="inputGroupContainer">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-              <input id="efLength" placeholder="Effective focal length" class="form-control" type="number" value="50" disabled>
+</div>
+</div>
+<div class="col-sm-5">
+<label class="control-label">Effective Focal Length</label>
+          <br />
+<div class="inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
+              <input class="form-control" disabled="" id="efLength" placeholder="Effective focal length" type="number" value="50" />
               <span class="input-group-addon">mm</span>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group col-sm-12">
-        <label class="control-label">Stabilization</label>
-        <div class="inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-hand-paper-o"></i></span>
-            <input id="fStops" placeholder="Stabilization Stops" class="form-control" type="number" min="0" value="0" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+</div>
+</div>
+</div>
+<div class="form-group col-sm-12">
+<label class="control-label">Stabilization</label>
+        <br />
+<div class="inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-hand-paper-o"></i></span>
+            <input class="form-control" id="fStops" max="10" min="0" onchange="CalculateShutterSpeed()" onkeypress="CalculateShutterSpeed()" onkeyup="CalculateShutterSpeed()" placeholder="Stabilization Stops" type="number" value="0" />
             <span class="input-group-addon">stops</span>
           </div>
-        </div>
-      </div>
-      
-    </fieldset>
-  </form>
-  <div>
-    <h3 id="shutterSpeed">Error Occurred / Enable JavaScript</h3>
-  </div>
+</div>
+</div>
+</fieldset>
+</form>
+
+<div class="panel panel-primary">
+<div class="panel-heading"></div>
+  <div class="panel-body" align="center"><h3 id="shutterSpeed">
+Error Occurred / Enable JavaScript</h3></div>
+</div>
 </div>
 </body>
 </html>
