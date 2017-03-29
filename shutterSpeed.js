@@ -14,7 +14,7 @@ function CalculateShutterSpeed() {
   } else {
     recShutterSpeed = Math.round(insecs);
   }
-  document.getElementById('shutterSpeed').innerHTML = "Recommended Shutter Speed: " + recShutterSpeed + " sec";
+  document.getElementById('shutterSpeed').innerHTML = recShutterSpeed + " sec";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
