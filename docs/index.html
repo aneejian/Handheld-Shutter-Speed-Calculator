@@ -1,0 +1,298 @@
+<!-- <html>
+<head>
+<link href="style.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="shutterSpeed.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container-fluid" style="font-family: 'Merriweather Sans', sans-serif; margin: 15px;">
+
+<form id="handHeldForm" class="form-horizontal" onload="CalculateShutterSpeed()">
+    <fieldset>
+<div class="form-group"><h2>
+Handheld Shutter Speed Calculator</h2>
+    </div>
+<br />
+      <div class="form-group">
+        <label class="control-label">Lens Focal Length</label>
+        <div class="inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
+            <input id="fLength" placeholder="Lens focal length" class="form-control" type="number" min="1" value="50" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+            <span class="input-group-addon">mm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label class="control-label">Crop Factor</label>
+          <div class="inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-crop"></i></span>
+              <input id="cropFactor" placeholder="Crop Factor" class="form-control" type="number" step=".1" min="1" value="1.6" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label class="control-label">Effective Focal Length</label>
+          <div class="inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
+              <input id="efLength" placeholder="Effective focal length" class="form-control" type="number" value="50" disabled>
+              <span class="input-group-addon">mm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Stabilization</label>
+        <div class="inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-hand-paper-o"></i></span>
+            <input id="fStops" placeholder="Stabilization Stops" class="form-control" type="number" min="0" value="0" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
+            <span class="input-group-addon">stops</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" align="center">
+        <div class="panel panel-default">
+          <div class="panel-heading">Recommended Shutter Speed</div>
+          <div class="panel-body" align="center">
+            <h3 id="shutterSpeed">
+Error Occurred / Enable JavaScript</h3></div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+</div>
+</body>
+</html> -->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Aneejian</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="keywords" content="Aneejian, GitHub">
+  <meta name="description" content="Aneejian is a personal blog. Topics of the blog include Robotic Process Automation, Software, Testing, Android, VB.NET, Excel,
+    UFT, HP ALM, Travel and more.">
+
+  <!-- start og tags -->
+  <meta property="og:image" content="https://cdn.rawgit.com/aneejian/Change-Case-Excel-Add-In/master/images/software-img.png">
+  <meta property="og:description" content="Aneejian is a personal blog. Topics of the blog include Robotic Process Automation, Software, Testing, Android, VB.NET, Excel,
+    UFT, HP ALM, Travel and more.">
+  <meta property="og:url" content="https://github.aneejian.com/">
+  <meta property="og:title" content="Aneejian">
+  <meta property="og:site_name" content="Aneejian">
+  <meta property="og:type" content="article">
+  <!-- end og tags -->
+
+  <meta name="author" content="Aneejian">
+  <meta property="article:publisher" content="https://facebook.com/aneejian">
+  <meta property="article:author" content="https://facebook.com/aneejian">
+
+  <meta property="fb:app_id" content="819231514810191">
+  <meta name="msvalidate.01" content="94E5608D7D22D6BAF20916F1BB5D8531">
+  <meta name="yandex-verification" content="7fd74c581e4fc3dc">
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Kaushan+Script" rel="stylesheet"> -->
+
+  <link href="https://www.aneejian.com/favicon.ico" rel="icon" type="image/x-icon">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63183739-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-63183739-1');
+  </script>
+
+  <!-- start ad code -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-4083103140539495",
+      enable_page_level_ads: true
+    });
+  </script>
+  <!-- end ad code -->
+
+  <!-- start WebSite -->
+  <script type='application/ld+json'>
+        {
+            "@context": "https://www.schema.org",
+            "@type": "WebSite",
+            "name": "Aneejian",
+            "alternateName": "Aneejian",
+            "url": "https://www.aneejian.com"
+        }
+    </script>
+  <!-- end WebSite -->
+
+  <!-- start Organization -->
+  <script type='application/ld+json'>
+        {
+            "@context": "https://www.schema.org",
+            "@type": "Organization",
+            "name": "Aneejian",
+            "url": "https://www.aneejian.com",
+            "logo": "https://cdn.rawgit.com/aneejian/BlogCodes/master/logos/logotext.png",
+            "image": "https://cdn.rawgit.com/aneejian/BlogCodes/master/logos/logotext.png",
+            "description": "Aneejian is a personal blog. Topics of the blog include Robotic Process Automation, Software, Testing, Android, VB.NET, Excel, UFT, HP ALM, Travel and more."
+        }
+    </script>
+  <!-- end Organization -->
+
+  <!-- font awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+    crossorigin="anonymous"></script>
+
+  <!-- google material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ad9d48f22309d0013d4f009&product=inline-share-buttons'
+    async='async'></script>
+
+  <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+
+  <nav class="navbar sticky-top navbar-light bg-light">
+    <div class="container">
+      <a id="brandAneejian" class="navbar-brand" href="#">
+        <img src="https://cdn.rawgit.com/aneejian/BlogCodes/master/logos/logotext.png" alt="">
+      </a>
+    </div>
+  </nav>
+  <br>
+
+  <div class="container">
+    <form action="">
+
+      <div class="row row-centered">
+        <div class="col">
+          <div class="form-group">
+            <label for="focalLength">Focal Length</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="material-icons">camera</i>
+                </span>
+              </div>
+              <input type="number" name="focalLength" id="focalLength" class="form-control" placeholder="" aria-describedby="helpId">
+              <div class="input-group-append">
+                <span class="input-group-text" id="inputGroupAppend">mm</span>
+              </div>
+            </div>
+            <small id="helpId" class="text-muted">Enter focal length of your lens in mm.</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="cropFactor">Crop Factor</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="material-icons">crop</i>
+                </span>
+              </div>
+              <input type="number" name="cropFactor" id="cropFactor" class="form-control" placeholder="" aria-describedby="helpId">
+            </div>
+            <small id="helpId" class="text-muted">Enter your camera's crop factor.</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="effectiveFocalLength">Focal Length</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="material-icons">camera</i>
+                </span>
+              </div>
+              <input readonly type="number" name="effectiveFocalLength" id="effectiveFocalLength" class="form-control" placeholder="" aria-describedby="helpId">
+              <div class="input-group-append">
+                <span class="input-group-text" id="inputGroupAppend">mm</span>
+              </div>
+            </div>
+            <small id="helpId" class="text-muted">
+              <var>Effective Focal Length</var> =
+              <var>Crop Factor</var> *
+              <var>Focal Length</var>
+            </small>
+          </div>
+          
+          <div class="form-group">
+            <label for="stabilization">Stabilization</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">
+                  <i class="far fa-hand-paper"></i>
+                </span>
+              </div>
+              <input type="number" name="stabilization" id="stabilization" class="form-control" placeholder="" aria-describedby="helpId">
+            </div>
+            <small id="helpId" class="text-muted">Enter the stabilization points offered by your camera.</small>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Recommended Shutter Speed</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+<!-- start footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <p class="col-centered">Copyright © 2018 Aneejian</p>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+
+</html>

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+/* start brand */
+
+#brandAneejian img {
+    max-width: 7em;
+    margin-left: .5em;
+}
+
+/* end brand */
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+/* start center in container */
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.row-centered { 
+    margin: auto; 
+    /* max-width: 300px; */
+}
+
+/* end center in container */
+
+/* start footer */
+
+footer {
+    background: #fff;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+}
+
+/* end footer */
