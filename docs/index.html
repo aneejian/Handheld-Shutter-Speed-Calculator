@@ -138,28 +138,28 @@ Error Occurred / Enable JavaScript</h3></div>
 
   <!-- start WebSite -->
   <script type='application/ld+json'>
-        {
-            "@context": "https://www.schema.org",
-            "@type": "WebSite",
-            "name": "Aneejian",
-            "alternateName": "Aneejian",
-            "url": "https://www.aneejian.com"
-        }
-    </script>
+    {
+      "@context": "https://www.schema.org",
+      "@type": "WebSite",
+      "name": "Aneejian",
+      "alternateName": "Aneejian",
+      "url": "https://www.aneejian.com"
+    }
+  </script>
   <!-- end WebSite -->
 
   <!-- start Organization -->
   <script type='application/ld+json'>
-        {
-            "@context": "https://www.schema.org",
-            "@type": "Organization",
-            "name": "Aneejian",
-            "url": "https://www.aneejian.com",
-            "logo": "https://cdn.rawgit.com/aneejian/BlogCodes/master/logos/logotext.png",
-            "image": "https://cdn.rawgit.com/aneejian/BlogCodes/master/logos/logotext.png",
-            "description": "Aneejian is a personal blog. Topics of the blog include Robotic Process Automation, Software, Testing, Android, VB.NET, Excel, UFT, HP ALM, Travel and more."
-        }
-    </script>
+    {
+      "@context": "https://www.schema.org",
+      "@type": "Organization",
+      "name": "Aneejian",
+      "url": "https://www.aneejian.com",
+      "logo": "https://cdn.rawgit.com/aneejian/BlogCodes/master/logos/logotext.png",
+      "image": "https://cdn.rawgit.com/aneejian/BlogCodes/master/logos/logotext.png",
+      "description": "Aneejian is a personal blog. Topics of the blog include Robotic Process Automation, Software, Testing, Android, VB.NET, Excel, UFT, HP ALM, Travel and more."
+    }
+  </script>
   <!-- end Organization -->
 
   <!-- font awesome -->
@@ -178,6 +178,7 @@ Error Occurred / Enable JavaScript</h3></div>
 
   <link rel="stylesheet" href="css/custom.css">
 
+
 </head>
 
 <body>
@@ -193,7 +194,7 @@ Error Occurred / Enable JavaScript</h3></div>
   <br>
 
   <div class="container">
-    <form action="">
+    <form id="shutterForm" onload="CalculateShutterSpeed()">
 
       <div class="row row-centered">
         <div class="col">
@@ -205,14 +206,14 @@ Error Occurred / Enable JavaScript</h3></div>
                   <i class="material-icons">camera</i>
                 </span>
               </div>
-              <input type="number" name="focalLength" id="focalLength" class="form-control" placeholder="" aria-describedby="helpId">
+              <input type="number" value="50" name="focalLength" id="focalLength" class="form-control" placeholder="" aria-describedby="helpId">
               <div class="input-group-append">
                 <span class="input-group-text" id="inputGroupAppend">mm</span>
               </div>
             </div>
             <small id="helpId" class="text-muted">Enter focal length of your lens in mm.</small>
           </div>
-          
+
           <div class="form-group">
             <label for="cropFactor">Crop Factor</label>
             <div class="input-group">
@@ -221,11 +222,11 @@ Error Occurred / Enable JavaScript</h3></div>
                   <i class="material-icons">crop</i>
                 </span>
               </div>
-              <input type="number" name="cropFactor" id="cropFactor" class="form-control" placeholder="" aria-describedby="helpId">
+              <input type="number" value="1.6" name="cropFactor" id="cropFactor" class="form-control" placeholder="" aria-describedby="helpId">
             </div>
             <small id="helpId" class="text-muted">Enter your camera's crop factor.</small>
           </div>
-          
+
           <div class="form-group">
             <label for="effectiveFocalLength">Focal Length</label>
             <div class="input-group">
@@ -245,7 +246,7 @@ Error Occurred / Enable JavaScript</h3></div>
               <var>Focal Length</var>
             </small>
           </div>
-          
+
           <div class="form-group">
             <label for="stabilization">Stabilization</label>
             <div class="input-group">
@@ -259,12 +260,15 @@ Error Occurred / Enable JavaScript</h3></div>
             <small id="helpId" class="text-muted">Enter the stabilization points offered by your camera.</small>
           </div>
         </div>
-        <div class="col">
-          <div class="card text-center" style="width: 18rem;">
+        <div class="col" align="center">
+          <div class="card text-center">
+            <div class="card-header">
+              Recommended Shutter Speed
+            </div>
             <div class="card-body">
-              <h5 class="card-title">Recommended Shutter Speed</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <div class="container">
+                <h1 class="display-4" id="shutterSpeed">1/32 sec</h1>
+              </div>
             </div>
           </div>
         </div>
@@ -283,6 +287,7 @@ Error Occurred / Enable JavaScript</h3></div>
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="js/shutterSpeed.js"></script>
 </body>
 
 <!-- start footer -->

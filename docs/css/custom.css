@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Merriweather+Sans:400,400i&subset=latin-ext');
 /* start brand */
 
 #brandAneejian img {
@@ -12,6 +12,12 @@ body {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
+
+.logo {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.5em;
+    color: #6aa84f;
+}
 /* start center in container */
 
 .col-centered {
