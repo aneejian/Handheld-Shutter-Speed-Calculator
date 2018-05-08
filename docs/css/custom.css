@@ -18,6 +18,10 @@ body {
     font-size: 1.5em;
     color: #6aa84f;
 }
+
+.rec {
+    margin-top: 2em;
+}
 /* start center in container */
 
 .col-centered {
