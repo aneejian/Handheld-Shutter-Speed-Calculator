@@ -170,7 +170,7 @@ Error Occurred / Enable JavaScript</h3></div>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
 
   <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ad9d48f22309d0013d4f009&product=inline-share-buttons'
@@ -196,7 +196,7 @@ Error Occurred / Enable JavaScript</h3></div>
   <div class="container">
     <form id="shutterForm" onload="CalculateShutterSpeed()">
 
-      <div class="row row-centered">
+      <div class="row h-100">
         <div class="col-md">
           <div class="form-group">
             <label for="focalLength">Focal Length</label>
@@ -206,7 +206,8 @@ Error Occurred / Enable JavaScript</h3></div>
                   <i class="material-icons">camera</i>
                 </span>
               </div>
-              <input type="number" value="50" min="1" step="1" name="focalLength" id="focalLength" class="form-control" placeholder="" aria-describedby="helpId">
+              <input type="number" value="50" min="1" step="1" name="focalLength" id="focalLength" class="form-control" placeholder=""
+                aria-describedby="helpId">
               <div class="input-group-append">
                 <span class="input-group-text" id="inputGroupAppend">mm</span>
               </div>
@@ -222,7 +223,8 @@ Error Occurred / Enable JavaScript</h3></div>
                   <i class="material-icons">crop</i>
                 </span>
               </div>
-              <input type="number" min="1" step=".1" value="1.6" name="cropFactor" id="cropFactor" class="form-control" placeholder="" aria-describedby="helpId">
+              <input type="number" min="1" step=".1" value="1.6" name="cropFactor" id="cropFactor" class="form-control" placeholder=""
+                aria-describedby="helpId">
             </div>
             <small id="helpId" class="text-muted">Enter your camera's crop factor.</small>
           </div>
@@ -255,7 +257,8 @@ Error Occurred / Enable JavaScript</h3></div>
                   <i class="far fa-hand-paper"></i>
                 </span>
               </div>
-              <input type="number" name="stabilization" step="0.5" min="0" max="6.5" value="0" id="stabilization" class="form-control" placeholder="" aria-describedby="helpId">
+              <input type="number" name="stabilization" step="0.5" min="0" max="6.5" value="0" id="stabilization" class="form-control"
+                placeholder="" aria-describedby="helpId">
               <div class="input-group-append">
                 <span class="input-group-text" id="inputGroupAppend">stops</span>
               </div>
@@ -263,8 +266,8 @@ Error Occurred / Enable JavaScript</h3></div>
             <small id="helpId" class="text-muted">Enter the stabilization stops offered by your camera.</small>
           </div>
         </div>
-        <div class="col-md" align="center">
-          <div class="card text-center rec">
+        <div class="col-md align-self-center" align="center">
+          <div class="card text-center">
             <div class="card-header">
               Recommended Shutter Speed
             </div>
@@ -284,11 +287,10 @@ Error Occurred / Enable JavaScript</h3></div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
     crossorigin="anonymous"></script>
   <script src="js/shutterSpeed.js"></script>
 </body>
