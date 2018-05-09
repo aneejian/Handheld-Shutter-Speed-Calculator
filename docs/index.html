@@ -1,102 +1,23 @@
-<!-- <html>
-<head>
-<link href="style.css" rel="stylesheet">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="shutterSpeed.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<div class="container-fluid" style="font-family: 'Merriweather Sans', sans-serif; margin: 15px;">
-
-<form id="handHeldForm" class="form-horizontal" onload="CalculateShutterSpeed()">
-    <fieldset>
-<div class="form-group"><h2>
-Handheld Shutter Speed Calculator</h2>
-    </div>
-<br />
-      <div class="form-group">
-        <label class="control-label">Lens Focal Length</label>
-        <div class="inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-            <input id="fLength" placeholder="Lens focal length" class="form-control" type="number" min="1" value="50" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
-            <span class="input-group-addon">mm</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div>
-          <label class="control-label">Crop Factor</label>
-          <div class="inputGroupContainer">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-crop"></i></span>
-              <input id="cropFactor" placeholder="Crop Factor" class="form-control" type="number" step=".1" min="1" value="1.6" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div>
-          <label class="control-label">Effective Focal Length</label>
-          <div class="inputGroupContainer">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-              <input id="efLength" placeholder="Effective focal length" class="form-control" type="number" value="50" disabled>
-              <span class="input-group-addon">mm</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label">Stabilization</label>
-        <div class="inputGroupContainer">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-hand-paper-o"></i></span>
-            <input id="fStops" placeholder="Stabilization Stops" class="form-control" type="number" min="0" value="0" onchange="CalculateShutterSpeed()" onKeyPress="CalculateShutterSpeed()" onKeyUp="CalculateShutterSpeed()">
-            <span class="input-group-addon">stops</span>
-          </div>
-        </div>
-      </div>
-      <div class="form-group" align="center">
-        <div class="panel panel-default">
-          <div class="panel-heading">Recommended Shutter Speed</div>
-          <div class="panel-body" align="center">
-            <h3 id="shutterSpeed">
-Error Occurred / Enable JavaScript</h3></div>
-        </div>
-      </div>
-    </fieldset>
-  </form>
-
-</div>
-</body>
-</html> -->
-
-
 <!doctype html>
 <html lang="en">
 
 <head>
-  <title>Aneejian</title>
+  <title>Handheld Shutter Speed Calculator | Aneejian</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <meta name="keywords" content="Aneejian, GitHub">
-  <meta name="description" content="Aneejian is a personal blog. Topics of the blog include Robotic Process Automation, Software, Testing, Android, VB.NET, Excel,
-    UFT, HP ALM, Travel and more.">
+  <meta name="keywords" content="Aneejian, Handheld Shutter Speed Calculator, Shuter Speed, Handheld, Camera">
+  <meta name="description" content="Handheld Shutter Speed Calculator calculates the recommended shutter speed to take photos without blur while taking shots
+  by holding camera in hand.">
 
   <!-- start og tags -->
-  <meta property="og:image" content="https://cdn.rawgit.com/aneejian/Change-Case-Excel-Add-In/master/images/software-img.png">
-  <meta property="og:description" content="Aneejian is a personal blog. Topics of the blog include Robotic Process Automation, Software, Testing, Android, VB.NET, Excel,
-    UFT, HP ALM, Travel and more.">
+  <meta property="og:image" content="https://cdn.rawgit.com/aneejian/Handheld-Shutter-Speed-Calculator/master/docs/images/handheld.jpg">
+  <meta property="og:description" content="Handheld Shutter Speed Calculator calculates the recommended shutter speed to take photos without blur while taking shots
+  by holding camera in hand.">
   <meta property="og:url" content="https://github.aneejian.com/">
-  <meta property="og:title" content="Aneejian">
-  <meta property="og:site_name" content="Aneejian">
+  <meta property="og:title" content="Handheld Shutter Speed Calculator | Aneejian">
+  <meta property="og:site_name" content="Handheld Shutter Speed Calculator | Aneejian">
   <meta property="og:type" content="article">
   <!-- end og tags -->
 
@@ -107,9 +28,6 @@ Error Occurred / Enable JavaScript</h3></div>
   <meta property="fb:app_id" content="819231514810191">
   <meta name="msvalidate.01" content="94E5608D7D22D6BAF20916F1BB5D8531">
   <meta name="yandex-verification" content="7fd74c581e4fc3dc">
-
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Kaushan+Script" rel="stylesheet"> -->
 
   <link href="https://www.aneejian.com/favicon.ico" rel="icon" type="image/x-icon">
 
@@ -194,94 +112,100 @@ Error Occurred / Enable JavaScript</h3></div>
   <br>
 
   <div class="container">
-    <form id="shutterForm" onload="CalculateShutterSpeed()">
 
-      <div class="row h-100">
-        <div class="col-md">
-          <div class="form-group">
-            <label for="focalLength">Focal Length</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupPrepend">
-                  <i class="material-icons">camera</i>
-                </span>
-              </div>
-              <input type="number" value="50" min="1" step="1" name="focalLength" id="focalLength" class="form-control" placeholder=""
-                aria-describedby="helpId">
-              <div class="input-group-append">
-                <span class="input-group-text" id="inputGroupAppend">mm</span>
-              </div>
-            </div>
-            <small id="helpId" class="text-muted">Enter focal length of your lens in mm.</small>
+    <div class="row">
+      <div class="col-md">
+        <div class="card text-center bg-light rec">
+          <div class="card-header">
+            Recommended Shutter Speed
           </div>
-
-          <div class="form-group">
-            <label for="cropFactor">Crop Factor</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupPrepend">
-                  <i class="material-icons">crop</i>
-                </span>
-              </div>
-              <input type="number" min="1" step=".1" value="1.6" name="cropFactor" id="cropFactor" class="form-control" placeholder=""
-                aria-describedby="helpId">
+          <div class="card-body">
+            <div class="card-text">
+              <p class="display-4" id="shutterSpeed">Enable JavaScript</p>
             </div>
-            <small id="helpId" class="text-muted">Enter your camera's crop factor.</small>
-          </div>
-
-          <div class="form-group">
-            <label for="effectiveFocalLength">Effective Focal Length</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupPrepend">
-                  <i class="material-icons">camera</i>
-                </span>
-              </div>
-              <input readonly type="number" name="effectiveFocalLength" id="effectiveFocalLength" class="form-control" placeholder="" aria-describedby="helpId">
-              <div class="input-group-append">
-                <span class="input-group-text" id="inputGroupAppend">mm</span>
-              </div>
-            </div>
-            <small id="helpId" class="text-muted">
-              <var>Effective Focal Length</var> =
-              <var>Crop Factor</var> *
-              <var>Focal Length</var>
-            </small>
-          </div>
-
-          <div class="form-group">
-            <label for="stabilization">Stabilization</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupPrepend">
-                  <i class="far fa-hand-paper"></i>
-                </span>
-              </div>
-              <input type="number" name="stabilization" step="0.5" min="0" max="6.5" value="0" id="stabilization" class="form-control"
-                placeholder="" aria-describedby="helpId">
-              <div class="input-group-append">
-                <span class="input-group-text" id="inputGroupAppend">stops</span>
-              </div>
-            </div>
-            <small id="helpId" class="text-muted">Enter the stabilization stops offered by your camera.</small>
           </div>
         </div>
-        <div class="col-md align-self-center" align="center">
-          <div class="card text-center">
-            <div class="card-header">
-              Recommended Shutter Speed
+        <form id="shutterForm" onload="CalculateShutterSpeed()"></form>
+        <div class="form-group">
+          <label for="focalLength">Focal Length</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">
+                <i class="material-icons">camera</i>
+              </span>
             </div>
-            <div class="card-body">
-              <div class="container">
-                <h1 class="display-4" id="shutterSpeed">Enable JavaScript</h1>
-              </div>
+            <input type="number" value="50" min="1" step="1" name="focalLength" id="focalLength" class="form-control" placeholder=""
+              aria-describedby="helpId">
+            <div class="input-group-append">
+              <span class="input-group-text" id="inputGroupAppend">mm</span>
             </div>
           </div>
+          <small id="helpId" class="text-muted">Enter focal length of your lens in mm.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="cropFactor">Crop Factor</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">
+                <i class="material-icons">crop</i>
+              </span>
+            </div>
+            <input type="number" min="1" step=".1" value="1.6" name="cropFactor" id="cropFactor" class="form-control" placeholder=""
+              aria-describedby="helpId">
+          </div>
+          <small id="helpId" class="text-muted">Enter your camera's crop factor.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="effectiveFocalLength">Effective Focal Length</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">
+                <i class="material-icons">camera</i>
+              </span>
+            </div>
+            <input readonly type="number" name="effectiveFocalLength" id="effectiveFocalLength" class="form-control" placeholder="" aria-describedby="helpId">
+            <div class="input-group-append">
+              <span class="input-group-text" id="inputGroupAppend">mm</span>
+            </div>
+          </div>
+          <small id="helpId" class="text-muted">
+            <var>Effective Focal Length</var> =
+            <var>Crop Factor</var> *
+            <var>Focal Length</var>
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="stabilization">Stabilization</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">
+                <i class="far fa-hand-paper"></i>
+              </span>
+            </div>
+            <input type="number" name="stabilization" step="0.5" min="0" max="6.5" value="0" id="stabilization" class="form-control"
+              placeholder="" aria-describedby="helpId">
+            <div class="input-group-append">
+              <span class="input-group-text" id="inputGroupAppend">stops</span>
+            </div>
+          </div>
+          <small id="helpId" class="text-muted">Enter the stabilization stops offered by your camera.</small>
         </div>
       </div>
+      </form>
+      <div class="col-md">
+        <div class="alert alert-light" role="alert">
+          <p>Handheld Shutter Speed Calculator calculates the recommended shutter speed to take photos without blur while taking
+            shots by holding camera in hand.</p>
+        </div>
+        <div class="sharethis-inline-follow-buttons"></div>
+      </div>
+    </div>
 
 
-    </form>
+
   </div>
 
 
@@ -299,7 +223,9 @@ Error Occurred / Enable JavaScript</h3></div>
 <footer>
   <div class="container">
     <div class="row">
-      <p class="col-centered">Copyright © 2018 Aneejian</p>
+      <p class="col-centered">Copyright © 2018
+        <span class="logo">Aneejian</span>
+      </p>
     </div>
   </div>
 </footer>
