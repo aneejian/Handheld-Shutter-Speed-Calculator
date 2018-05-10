@@ -1,7 +1,7 @@
 var inputFocalLength;
 var inputCropFactor;
 var inputStabilization;
-var inputEffectiveFocalLength;
+// var inputEffectiveFocalLength;
 var inputShutterSpeed;
 
 $(window).ready(CalculateShutterSpeed());
@@ -28,7 +28,7 @@ function setElements() {
   inputFocalLength = $('#focalLength');
   inputCropFactor = $('#cropFactor');
   inputStabilization = $('#stabilization');
-  inputEffectiveFocalLength = $('#effectiveFocalLength');
+  // inputEffectiveFocalLength = $('#effectiveFocalLength');
   inputShutterSpeed = $('#shutterSpeed');
 }
 
@@ -38,7 +38,7 @@ function CalculateShutterSpeed() {
   var cropFactor = inputCropFactor.val();
   var stabilizationStops = inputStabilization.val();
   var effectiveFocalLength = focalLength * cropFactor;
-  inputEffectiveFocalLength.val(Math.round(effectiveFocalLength));
+  // inputEffectiveFocalLength.val(Math.round(effectiveFocalLength));
   var stabilization = Math.pow(2, stabilizationStops);
   var denominator = effectiveFocalLength / stabilization;
   var insecs = stabilization / effectiveFocalLength;
